@@ -4,7 +4,8 @@ use Aws\S3\S3Client;
 use Aws\Exception\AwsException;
 use Aws\Sqs\SqsClient;
 
-$returnedHtml = ' <html> <body> <h1>My First Heading</h1> <p>My first paragraph.</p> </body> </html> ';
+#$returnedHtml = ' <html> <body> <h1>My First Heading</h1> <p>My first paragraph.</p> </body> </html> ';
+$returnedHtml = file_get_contents('./test.html', true);
 
 
 $s3Client = new S3Client([
